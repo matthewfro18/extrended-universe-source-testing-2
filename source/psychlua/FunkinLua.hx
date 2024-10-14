@@ -1,6 +1,48 @@
 #if LUA_ALLOWED
 package psychlua;
 
+import backend.WeekData;
+import backend.Highscore;
+import backend.Song;
+
+import openfl.Lib;
+import openfl.utils.Assets;
+import openfl.display.BitmapData;
+import flixel.FlxBasic;
+import flixel.FlxObject;
+
+#if (!flash && sys)
+import flixel.addons.display.FlxRuntimeShader;
+#end
+
+import cutscenes.DialogueBoxPsych;
+
+import objects.StrumNote;
+import objects.Note;
+import objects.NoteSplash;
+import objects.Character;
+
+import states.MainMenuState;
+import states.StoryMenuState;
+import states.FreeplayState;
+
+import substates.PauseSubState;
+import substates.GameOverSubstate;
+
+import psychlua.LuaUtils;
+import psychlua.LuaUtils.LuaTweenOptions;
+#if HSCRIPT_ALLOWED
+import psychlua.HScript;
+#end
+import psychlua.DebugLuaText;
+import psychlua.ModchartSprite;
+
+import flixel.input.keyboard.FlxKey;
+import flixel.input.gamepad.FlxGamepadInputID;
+
+import haxe.Json;
+import mobile.psychlua.Functions;
+
 import llua.Lua;
 import llua.LuaL;
 import llua.State;
