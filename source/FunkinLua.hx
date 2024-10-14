@@ -45,14 +45,14 @@ import DialogueBoxPsych;
 import hscript.Parser;
 import hscript.Interp;
 #end
-
+import psychlua.FunkinLua;
 #if desktop
 import Discord;
 #end
 
 using StringTools;
 
-class FunkinLua {
+class FunkinLua exetends psychlua.FunkinLua {
 	public static var Function_Stop:Dynamic = 1;
 	public static var Function_Continue:Dynamic = 0;
 	public static var Function_StopLua:Dynamic = 2;
