@@ -71,7 +71,7 @@ import DynamicShaderHandler;
  * "function triggerEvent" - Called when the song hits your event's timestamp, this is probably what you were looking for
 **/
 class PlayState extends MusicBeatState
-{;
+{
 	public static var animatedShaders:Map<String, DynamicShaderHandler> = new Map<String, DynamicShaderHandler>();
 	public var shader_chromatic_abberation:ChromaticAberrationEffect;
 	public var modchartSaves:Map<String, FlxSave> = new Map<String, FlxSave>();
